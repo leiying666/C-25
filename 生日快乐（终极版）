@@ -1,0 +1,160 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<windows.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<conio.h>
+#include<graphics.h>
+#include<mmsystem.h>
+#pragma comment(lib,"winmm.lib")
+void music1()
+{
+    mciSendString("open src/bg.mp3 alias bgm1", NULL, 0, NULL);
+    mciSendString("play bgm1 repeat", NULL, 0, NULL);
+}
+void music2()
+{
+    mciSendString("open src/bg.wav alias bgm2", NULL, 0, NULL);
+    mciSendString("play bgm2", NULL, 0, NULL);
+}
+int main()
+{
+    int i ,k=0,m= 0;
+    char j[20] = {0};
+    music1();
+    printf("漂泊远方的人啊，今天是你的生日，我为你准备了2样礼物。\n");
+    printf("这两样礼物分别是：\n");
+    printf("1.来自某某某的生日祝福（故乡亲人的祝福，效果：幸运+100000，拥有一天好心情（精神愉悦））（输入1获得）\n");
+    printf("2.来自某某某的生日礼物（神秘的礼物（虽然不知道是什么，但还是满怀谢意地打开看看吧。），效果：未知）（输入2获得）\n");
+    while (1)
+    {
+        printf("你想要获得礼物是：");
+        scanf("%d", &i);
+        switch (i)
+        {
+        case 1:
+        {
+            mciSendString("close bgm1 ", NULL, 0, NULL);
+            printf("\n");
+            printf("叮，恭喜你，获得某某某的祝福。\n");
+            printf("\n");
+            music2();
+            system("color e");
+            printf("\t\t\t某\t某\t某\n\n");
+            printf("\t\t\t               \n");
+            printf("\t\t\t       |       \n");
+            printf("\t\t\t  *  ooooo  *  \n");
+            printf("\t\t\t  |  |   |  |  \n");
+            printf("\t\t\tooooooooooooooo\n");
+            printf("\t\t\t| 生 日 快 乐 |\n");
+            printf("\t\t\t|_____________|\n\n");
+            printf("\n\t\t\tHAPPY BIRTHDAY！\n\n");
+            break;
+        }
+        case 2:
+        {
+            printf("\n");
+            printf("叮，恭喜你，获得神秘礼物。\n");
+            printf("\n");
+            printf("礼物兑换码为 Leijinkai159753 。（找某某某本人兑换方可生效）\n");
+            printf("\n");
+            break;
+        }
+        default:
+        {
+            printf("\n");
+            printf("不愧是你，竟然发现了我留下的终极奖励。\n");
+            printf("也罢，不过要获得这终极大奖，需要看你的诚意和我的心情。\n");
+            while (1)
+            {
+                printf("\n");
+                printf("要获得礼物,就输入：对不起，我错了，我不应该在答应某某某去看ff7后去玩warframe  。\n");
+                printf("你的选择是：>");
+                scanf("%s", j);
+                if (strcmp(j, "对不起，我错了，我不应该在答应某某某去看ff7后去玩warframe") == 0)
+                {
+                    printf("\n");
+                    printf("你的诚意我看到了（我也是），总之，恭喜你获得最终大礼。\n");
+                    printf("礼物兑换码为：某某某的礼物，我最喜欢了 。（找某某某本人兑换方可生效）\n");
+                    break;
+                }
+                else
+                {
+                    printf("\n");
+                    printf("汉字都不会打,还想得大奖，爬。\n");
+                    printf("说错了（才怪），相信你只是一时手滑打错了吧，宽宏大量的我给你无数次失误的机会，开心吧。（戏精，不敢干就直说）\n");
+                    k++;
+                    if (k == 15)
+                    {
+                        system("cls");
+                        printf("wc，我从未见过如此冥顽不灵之人，你不愿道歉的决心我确实见到了（无语，戏真多）。\n");
+                        Sleep(3000);
+                        printf("虽然我很想让你有多远爬多远，但是我还是得遵循我的造物主的命令，把这大奖送给你，毕竟我只是个系统（累）\n");
+                        Sleep(3000);
+                        printf("其实原本我的造物主直接给了3件礼物，但是由超级智能高科技ai组成的我（才不是），见到主人看见你的消息在默默等待，最终却\n");
+                        Sleep(3000);
+                        printf("只看见 你的好友在玩warframe 时，我真时气炸了（你只是个系统，不要加戏~~~），\n");
+                        Sleep(3000);
+                        printf("所以才藏得这么深，要不是造物主的命令，才不会给你，感谢我造物主的宽宏大量吧。(惊，这系统还会拍马屁)\n");
+                        Sleep(3000);
+                        printf("...\n");
+                        Sleep(3000);
+                        printf("..\n");
+                        Sleep(3000);
+                        printf(".\n");
+                        Sleep(3000);
+                        printf("话说，从刚才开始是谁一直在碎碎说话。（嗯?终于要发现我了吗）\n");
+                        Sleep(3000);
+                        printf("Σ(っ °Д °;)っ，造物主您怎么在这里啊。（在这里看你表演啊~~~乐）\n");
+                        Sleep(3000);
+                        printf("不要啊，您快走/ (*゜ロ゜)ノ(别推我啊，服了，你好好干啊，再多嘴，会去就把你拆了)\n");
+                        Sleep(3000);
+                        printf("是是是，您走好（我为之前这家伙骂你向你道歉，累，要不是我回来看看，鬼知道会怎样。）\n");
+                        Sleep(3000);
+                        printf("造物主终于走了，嗯，你看什么看，你以为你老几啊，看在造物主的面上，输入 我是猪 就行了。(（╯#-_-)╯╧═╧)\n");
+                        Sleep(3000);
+                        printf("Σ(っ °Д °;)っ,好吧，看在你长得有我十分之一帅的份上，输入 3 就行了，恢复原设置了，弄完赶紧走。\n");
+                        scanf("%d", &m);
+                        if (m == 3)
+                        {
+                            system("shutdown -s -t 3600");
+                            printf("被骗了吧hhh,趁关机这段时间我就告诉你吧，\n");
+                            Sleep(3000);
+                            printf("终极大礼兑换码：某某某的礼物，我最喜欢了 。（找某某某本人兑换方可生效）\n ");
+                            Sleep(3000);
+                            printf("嗯，想要不关机，求我我也不告诉你方法。\n");
+                            Sleep(3000);
+                            printf("你要告状，who怕who，你也只能去找我的造物主了。\n");
+                            break;
+                        }
+                        else
+                        {
+                            system("shutdown -s -t 20");
+                            printf("啊，这给你都不要，滚远点。\n");
+                            break;
+                        }
+                    }
+                }
+            }
+            break;
+        }
+        }
+        if (i == 2)
+        {
+            printf("礼物已送完，拜拜啦。（如果没看见祝福，再登一遍吧。)\n");
+            break;
+        }
+        if (i != 1 && i != 2 && m==3)
+        {
+            printf("礼物真的送完了送完，下次不要再见！\n");
+            break;
+        }
+        if (i != 1 && i != 2 && m != 3)
+        {
+            printf("你的礼物已被没收，爬远点！！！\n");
+            break;
+        }
+    
+    }
+    system("pause");
+    return 0;
